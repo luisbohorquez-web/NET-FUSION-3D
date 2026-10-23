@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+/* Tema NET-FUSION 3D: negro, violeta y amarillo (inspirado en Persona 5 y el menú Ranked de Brawl Stars) */
+:root{--bg:#0B0612;--bg2:#1A0B2E;--glass:rgba(22,10,38,.94);--panel:rgba(22,10,38,.94);--line:#B45CFF;--g:#FFD60A;--c:#B45CFF;--r:#FF2E93;--t:#FFFFFF;--m:#D9C8F0;--ys:#A67C00;--mono:"Lilita One","Arial Black",Impact,sans-serif}
+html{font-synthesis:none}
+body{background:repeating-linear-gradient(115deg,rgba(180,92,255,.09) 0 18px,transparent 18px 36px),radial-gradient(900px 600px at 80% -10%,#4B1D8F 0,transparent 62%),radial-gradient(700px 500px at 0 100%,#3A1670 0,transparent 60%),#0B0612}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(rgba(255,214,10,.18) 1.4px,transparent 1.8px) 0 0/16px 16px;-webkit-mask-image:linear-gradient(115deg,transparent 55%,#000);mask-image:linear-gradient(115deg,transparent 55%,#000)}
+::selection{background:var(--g);color:#000}
+
+/* ---- títulos: trazo negro, sombra dura y cursiva ---- */
+h1,h2,h3,h4,.mono{font-family:var(--mono);font-weight:400;text-transform:uppercase}
+h2{display:inline-block;color:var(--g);-webkit-text-stroke:2px #000;paint-order:stroke fill;text-shadow:3px 3px 0 #000,6px 6px 0 var(--c);transform:skewX(-7deg);margin-bottom:14px}
+.logo{font-family:var(--mono);font-weight:400;text-transform:uppercase;letter-spacing:-.01em;color:#fff;-webkit-text-stroke:3px #000;paint-order:stroke fill;text-shadow:5px 5px 0 var(--c),9px 9px 0 #000;transform:skewX(-7deg)}
+.logo span{color:var(--g)}
+.logo small{display:inline-block;-webkit-text-stroke:0;text-shadow:none;background:#000;color:var(--g);padding:4px 14px;margin-top:16px;letter-spacing:.04em;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.logo .outline{color:var(--g);-webkit-text-stroke:3px #000;text-shadow:6px 6px 0 var(--c),10px 10px 0 #000}
+.logo .dash{color:var(--g)}
+
+/* ---- paneles con esquinas cortadas ---- */
+.card,.how,.stage,.pick,.egg-box{border-radius:0}
+.card{background:var(--glass);backdrop-filter:none;border:3px solid var(--c);border-left:9px solid var(--g);box-shadow:none;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,22px 100%,0 calc(100% - 22px))}
+.card h3,.info h2{color:#fff;-webkit-text-stroke:0;text-shadow:2px 2px 0 var(--c);transform:none}
+.stage{border:3px solid var(--c);box-shadow:none;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,22px 100%,0 calc(100% - 22px))}
+.stage.full{clip-path:none;border:0}
+.how{border:3px solid var(--c);clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}
+.pick{border:3px solid var(--c);clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px))}
+.pick[aria-pressed=true]{background:var(--g);border-color:#000}
+.pick[aria-pressed=true] b,.pick[aria-pressed=true] small{color:#000}
+.pick[aria-pressed=true] svg{stroke:#000}
+.x{border:2px solid #000;background:var(--g);color:#000}
+.tag,.layer{background:#000;color:var(--g);border:2px solid var(--g);border-radius:0;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);padding:2px 16px;text-transform:uppercase}
+.facts{border:3px solid var(--c);border-radius:0;background:var(--c)}
+.fact{background:#12091f}
+.fact dd{color:var(--g)}
+.top{border-bottom:4px solid var(--g);background:#000}
+.brand{font-family:var(--mono);font-weight:400;text-transform:uppercase;-webkit-text-stroke:1px #000;paint-order:stroke fill;text-shadow:2px 2px 0 var(--c)}
+.badge{font-family:var(--mono);font-weight:400;text-transform:uppercase;-webkit-text-stroke:2px #000;paint-order:stroke fill}
+.q,.who{border-left:6px solid var(--g)}
+.photo{border:3px dashed var(--c);border-radius:0}
+.split svg,model-viewer{border:3px solid var(--c);border-radius:0}
+.frame{opacity:1}
+.bar{background:#000;border-top:3px solid var(--g)}
+.tabs{border-bottom:3px solid var(--c)}
+.tab{font-family:var(--mono);text-transform:uppercase;font-size:.95rem}
+.tab[aria-selected=true]{background:var(--g);color:#000;border-bottom-color:#000}
+thead th{background:var(--g);color:#000;font-family:var(--mono);font-weight:400;text-transform:uppercase}
+th,td{border-bottom:2px solid rgba(180,92,255,.5)}
+footer{border-top:4px solid var(--g);background:#000}
+input[type=range]{accent-color:var(--g)}
+
+/* ---- botones: amarillo con borde negro y base 3D ---- */
+button,.back{font-family:var(--mono);font-weight:400;text-transform:uppercase;letter-spacing:.03em;font-size:1rem;color:#000;background:var(--g);border:3px solid #000;border-radius:6px;box-shadow:0 5px 0 var(--ys),0 5px 0 3px #000;transform:skewX(-8deg);padding:11px 22px;transition:transform .1s,box-shadow .1s;text-decoration:none;display:inline-block}
+button:hover,.back:hover{filter:none;transform:skewX(-8deg) translateY(-2px)}
+button:active,.back:active{transform:skewX(-8deg) translateY(4px);box-shadow:0 1px 0 var(--ys),0 1px 0 3px #000}
+button.ghost{background:#000;color:var(--g);border-color:var(--g);box-shadow:0 5px 0 var(--c)}
+.years button{background:#000;color:#fff;border:3px solid var(--c);box-shadow:0 4px 0 #000}
+.years button.on{background:var(--g);color:#000;border-color:#000}
+.tool,.nav,.x,.tab,.pick{transform:none!important;box-shadow:none;text-transform:none;font-family:var(--mono)}
+.tool{border-radius:6px;padding:7px 8px;font-size:.78rem;background:transparent}
+.tool[aria-pressed=true]{background:var(--g);color:#000;border-color:#000}
+.tool.cta{background:var(--g);color:#000;border-color:#000}
+.tool.cta[aria-pressed=true]{background:var(--r);color:#fff}
+.nav{background:#000;border:3px solid var(--g);color:var(--g);border-radius:6px;padding:0}
+.tab{border:0;border-bottom:3px solid transparent;padding:10px 12px;background:none;color:var(--m)}
+.stage.full .tool:hover{color:#fff}
+
+/* ---- portada ---- */
+.tag.fade{background:#000;color:var(--g);border:0;padding:6px 18px;max-width:none;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);text-transform:uppercase}
+#start{font-family:var(--mono);font-weight:400;text-transform:uppercase;font-size:1.3rem;padding:18px 40px;background:var(--g);color:#000;border:4px solid #000;border-radius:6px;box-shadow:0 7px 0 var(--ys),0 7px 0 4px #000;animation:inSk .8s ease 1.75s forwards,pulse 2.4s ease-out 2.8s infinite}
+@keyframes inSk{to{opacity:1;transform:skewX(-8deg)}}
+#start:hover{transform:skewX(-8deg) translateY(-2px);filter:none}
+.boot{background:#000;border:4px solid var(--g);border-radius:0;clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px))}
+.boot h2{transform:none;text-shadow:2px 2px 0 var(--c);-webkit-text-stroke:0;font-size:1.3rem}
+.track{height:16px;border-radius:0;background:#1A0B2E;border:3px solid #000;transform:skewX(-20deg)}
+.fill{border-radius:0;background:var(--g);box-shadow:none}
+.stats b{color:var(--g)}
+
+/* ---- easter egg ---- */
+.egg-ov{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:rgba(7,3,13,.9);padding:14px}
+.egg-box{width:min(560px,100%);max-height:100%;overflow:auto;background:#0B0612;border:4px solid var(--g);padding:22px;color:#fff;font:400 1rem/1.55 Inter,system-ui,sans-serif;clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,24px 100%,0 calc(100% - 24px))}
+.egg-box.wide{width:min(900px,100%)}
+.egg-box h2{display:block;font-size:1.5rem;margin:0 0 10px}
+.egg-opts{display:flex;flex-wrap:wrap;gap:12px 10px;margin:16px 0}
+.egg-opts button.done{opacity:.35;pointer-events:none}
+.egg-f{display:block;margin:10px 0;font:400 .95rem var(--mono);text-transform:uppercase;color:var(--c)}
+.egg-in{display:block;width:100%;margin-top:4px;background:#000;border:3px solid var(--c);color:#fff;font:600 1rem ui-monospace,Consolas,monospace;padding:10px 12px;border-radius:4px}
+.egg-in:focus{outline:2px solid var(--g);border-color:var(--g)}
+.egg-msg{min-height:1.6em;margin:10px 0;color:var(--m);font-size:.9rem}
+.egg-msg.bad{color:var(--r)}
+.egg-view{position:relative;height:min(58vh,420px);background:radial-gradient(60% 60% at 50% 45%,#4B1D8F 0,#0B0612 75%);border:3px solid var(--c)}
+.egg-view canvas{width:100%;height:100%;display:block}
+.egg-bar{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.egg-shake{animation:eggshake .4s}
+@keyframes eggshake{20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-6px)}80%{transform:translateX(6px)}}
+@media(max-width:640px){.logo{-webkit-text-stroke-width:2px;text-shadow:3px 3px 0 var(--c),5px 5px 0 #000}}
+@media(prefers-reduced-motion:reduce){.egg-shake{animation:none}}
